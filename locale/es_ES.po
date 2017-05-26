@@ -1,0 +1,8 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+#, fuzzy
+msgctxt "field:purchase.request,categories:"
+msgid "Categories"
+msgstr "Categorías"

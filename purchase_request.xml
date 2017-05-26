@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="purchase_request_view_tree">
+            <field name="model">purchase.request</field>
+            <field name="name">purchase_request_tree</field>
+            <field name="inherit"
+                ref="purchase_request.purchase_request_view_tree"/>
+        </record>
+    </data>
+</tryton>
