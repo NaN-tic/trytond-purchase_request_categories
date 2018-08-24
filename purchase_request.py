@@ -6,9 +6,8 @@ from trytond.pool import PoolMeta
 __all__ = ['PurchaseRequest']
 
 
-class PurchaseRequest:
+class PurchaseRequest(metaclass=PoolMeta):
     __name__ = 'purchase.request'
-    __metaclass__ = PoolMeta
 
     categories = fields.Function(fields.Many2Many('product.category',
         None, None, 'Categories'),
