@@ -2,6 +2,7 @@
 # this repository contains the full copyright notices and license terms.
 from trytond.model import fields
 from trytond.pool import PoolMeta
+from trytond.pyson import Eval
 
 __all__ = ['PurchaseRequest']
 
@@ -10,7 +11,9 @@ class PurchaseRequest(metaclass=PoolMeta):
     __name__ = 'purchase.request'
 
     categories = fields.Function(fields.Many2Many('product.category',
-        None, None, 'Categories'),
+        None, None, 'Categories', context={
+            'company': Eval('company'),
+            }, depends=['company']),
         'get_categories', searcher='search_categories_field')
 
     def get_categories(self, name):
