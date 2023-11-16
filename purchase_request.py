@@ -12,7 +12,7 @@ class PurchaseRequest(metaclass=PoolMeta):
 
     categories = fields.Function(fields.Many2Many('product.category',
         None, None, 'Categories', context={
-            'company': Eval('company'),
+            'company': Eval('company', -1),
             }, depends=['company']),
         'get_categories', searcher='search_categories_field')
 
